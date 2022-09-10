@@ -20,8 +20,4 @@
 
 9 - Write a program that prints all possible combinations of single-digit numbers.
 
-10 - write a program that prints the remaining advanced tasks. 
-
-
-
-
+10 - write a program that prints the remaining advanced tasks.
