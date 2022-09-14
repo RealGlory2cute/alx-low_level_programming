@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_sign - Entr point
  * @n: carrier variable
@@ -21,4 +20,3 @@ return (-1);
 _putchar('0');
 return (0);
 }
-		
