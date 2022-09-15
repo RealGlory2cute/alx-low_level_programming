@@ -5,6 +5,7 @@
  * Description: prints the 9 times table
  * Return: void
  */
+
 void times_table(void)
 {
 	int row, column, product, tens, ones;
@@ -15,7 +16,8 @@ void times_table(void)
 		{
 			product = row * column;
 			tens = product / 10;
-			ones = product % 10;			
+			ones = product % 10;
+
 			if (column == 0)
 			{
 				_putchar('0');
