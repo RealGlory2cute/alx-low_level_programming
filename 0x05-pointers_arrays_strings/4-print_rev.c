@@ -3,7 +3,7 @@
 /**
  * print_rev - prints a string, in reverse, followed by a new line.
  * @s: input string.
- * Return: no return.
+ * Return: Alwaays 0.
  */
 void print_rev(char *s)
 {
@@ -19,4 +19,6 @@ void print_rev(char *s)
 	for (count--; count >= 0; count--)
 		_putchar(s[count]);
 	_putchar('\n');
+	
+	return (0);
 }
