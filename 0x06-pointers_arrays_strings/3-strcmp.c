@@ -6,9 +6,10 @@
  *
  * Return: int value
  */
+
 int _strcmp(char *s1, char *s2)
 {
-	int a = 0, b = 0, c = 0, r = 0, 1im;
+	int a = 0, b = 0, c = 0, r = 0, lim;
 
 	while (s1[a])
 	{
@@ -22,14 +23,14 @@ int _strcmp(char *s1, char *s2)
 
 	if (a <= b)
 	{
-		1im = a;
+		lim = a;
 	}
 	else
 	{
-		1im = b;
+		lim = b;
 	}
 
-	while (c <= 1im)
+	while (c <= lim)
 	{
 		if (s1[c] == s2[c])
 		{
@@ -44,6 +45,5 @@ int _strcmp(char *s1, char *s2)
 		
 		c++;
 	}
-
 	return (r);
 }
