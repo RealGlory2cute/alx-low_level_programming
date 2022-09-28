@@ -8,4 +8,3 @@
 6 - Write a function that returns 1 if the input integer is a prime number, otherwise return 0.
 7 - write a function that returns 1 if a string is a palindrome and 0 if not.
 8 - write a funtion that compares two strings and returns 1 if the strings can be considered identical. otherwise, returns 0
-
