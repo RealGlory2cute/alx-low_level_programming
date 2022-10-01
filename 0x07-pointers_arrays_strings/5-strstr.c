@@ -1,12 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * _strstr - Locates a substring.
  * @haystack: The string to be searched.
  * @needle: The substring to be located.
  *
- * Return: If the ubstring is located - pointer to the beginning of the located substring.
+ * Return: If the substring is located - a pointer to the beginning of the located substring.
  * If the substring is not located - NULL.
  */
 
