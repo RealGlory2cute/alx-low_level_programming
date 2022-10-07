@@ -1,50 +1,52 @@
 #include "main.h"
-#include <stlib.h>
 
 /**
- * string_nconcat - concatenates two strings.
- * @s1: first string.
- * @s2: second string.
- * @n: amount of bytes.
- *
- * Return: pointer to the allocated memory.
- * if malloc fails, status value is equal to 98.
+ * _strlen - find length of a string
+ * @s: string
+ * Return: int
+ */
+
+unsigned int _strlen(char *s)
+{
+unsigned int size = 0;
+for (; s[size] != '\0'; size++)
+;
+return (size);
+}
+
+/**
+ * *string_nconcat - concatenates two strings
+ * @s1: string 1
+ * @s2: string 2
+ * @n: first bytes of s2 to be used
+ * Return: pointer or NULL
  */
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *sout;
-	unsigned int ls1, ls2, lsout, i;
+unsigned int i, j;
+char *m;
 
-	if (s1 == NULL)
-		s1 = "";
+if (s1 == NULL)
+	s1 = "";
+if (s2 == NULL)
+	s2 = "";
 
-	if (s2 == NULL)
-		s2 = "";
+if (n < _strlen(s2))
+	m = malloc(_strlen(s1) + n * sizeof(char) + 1);
+else
+	m = malloc(_strlen(s1) + _strlen(s2) + 1);
 
-	for (ls1 = 0; s1[ls1] != '\0'; ls1++)
-		;
+if (m == 0)
+	return (NULL);
 
-	for (ls2 = 0; s2[ls2] != '\0'; ls2++)
-		;
+for (i = 0; s1[i] != '\0'; i++)
+	m[i] = s1[i];
 
-	if (n > ls2)
-		n = ls2;
+for (j = 0; s2[j] != '\0' && j < n; i++, j++)
+	m[i] = s2[j];
 
-	lsout = ls1 + n;
+m[i] = '\0';
 
-	sout = malloc(1sout + 1);
-
-	if (sout == NULL)
-		return (NULL);
-
-	for (i = 0; i < lsout; i++)
-		if (i < ls1)
-			sout[i] = s1[i];
-		else
-			sout[i] = s2[i];
-
-	sout[i] = '\0';
-
-	return (sout);
+return (m);
 }
